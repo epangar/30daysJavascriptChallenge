@@ -2,9 +2,9 @@
 
 function valueKey(pressedKey){
     
-    var value=document.getElementsByClassName("key")
-    
-    return pressedKey.keyCode
+    var value=pressedKey.keyCode
+    console.log(value)
+    return value
 }
 
 function clickKey(){
@@ -14,6 +14,6 @@ function clickKey(){
 (function drums(){
     
     document.addEventListener('keyup', valueKey)
-    debugger
+    
     
 })()
