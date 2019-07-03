@@ -1,22 +1,36 @@
 
-function valueKey(pressedKey){
+let getInstrument = (pressedKey) =>{
     
-    var value=pressedKey.keyCode
-    console.log(value)
-    return value
+    
+    let sounds = {
+        "a":"clap.wav",
+        "s":"hihat.wav",
+        "d":"kick.wav",
+        "f":"openhat.wav",
+        "g":"boom.wav",
+        "h":"ride.wav",
+        "j":"snare.wav",
+        "k":"tom.wav",
+        "l":"tink.wav",
+    },
+    
+    myKey=pressedKey.key,
+
+    myInstrument=sounds[myKey];
+    
+    playIntrument(myInstrument);
 }
 
-function clickKey(){
+let playIntrument = (myInstrument) => {
+    let route = "./sounds/"+myInstrument,
+        playMe= new Audio( route );
 
+    playMe.play();
+     
 }
 
-(function drums(){
+let drums = (() => {
     
-    var sounds = {
-        
-    }
-    document.addEventListener('keyup', valueKey)
-    var sound= new Audio( "./sounds/boom.wav");
-    console.log(sound)
-    
+    document.addEventListener('keyup', getInstrument);
+
 })()
