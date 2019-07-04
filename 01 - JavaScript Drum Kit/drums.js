@@ -1,6 +1,4 @@
-
 let getInstrument = (pressedKey) =>{
-    
     
     let sounds = {
         "a":"clap.wav",
