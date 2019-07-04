@@ -29,9 +29,9 @@ let playIntrument = (myInstrument, data) => {
         played=document.querySelector("[data-key='" +data+"']");
 
     
-    played.classList.add('playing')
-    setTimeout(()=>{played.classList.remove('playing')}, 300)   
-    playMe.play();    
+    played.classList.add('playing');
+    setTimeout(()=>{played.classList.remove('playing')}, 300);  
+    playMe.play(); 
     
 }
 
