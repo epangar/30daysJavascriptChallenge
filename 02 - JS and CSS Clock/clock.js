@@ -14,10 +14,10 @@ function setDate(){
 }
 
 function moveHands(current){
-  
+
 }
 
 (function clock(){
 
-  setInterval(setDate,1000)
+  setInterval(setDate,1000) 
 })()
