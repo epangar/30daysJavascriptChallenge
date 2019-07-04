@@ -1,16 +1,15 @@
 let getInstrument = (pressedKey) =>{
     
-    console.log(pressedKey)
     let sounds = {
-        "a":"clap.wav",
-        "s":"hihat.wav",
-        "d":"kick.wav",
-        "f":"openhat.wav",
-        "g":"boom.wav",
-        "h":"ride.wav",
-        "j":"snare.wav",
-        "k":"tom.wav",
-        "l":"tink.wav",
+        "a":"clap",
+        "s":"hihat",
+        "d":"kick",
+        "f":"openhat",
+        "g":"boom",
+        "h":"ride",
+        "j":"snare",
+        "k":"tom",
+        "l":"tink",
     },
     
     myKey=pressedKey.key,
@@ -24,9 +23,9 @@ let getInstrument = (pressedKey) =>{
 
 let playIntrument = (myInstrument, data) => {
 
-    let route = "./sounds/"+myInstrument,
+    let route = `./sounds/${myInstrument}.wav`,
         playMe= new Audio( route ),
-        played=document.querySelector("[data-key='" +data+"']");
+        played=document.querySelector(`[data-key='${data}']`);
 
     
     played.classList.add('playing');
