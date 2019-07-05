@@ -5,15 +5,19 @@ function setDate(){
     'h': date.getHours(),
     'm': date.getMinutes(),
     's': date.getSeconds()
-  },
+  }
 
-  date = `${obj.h}:${obj.m}:${obj.s}`
-  console.log(date)
+  moveHands(current);
+}
 
-  moveHands(current)
+function setHands(number, hand){
+  var myHand=document.getElementsByClassName(hand).style.property()
 }
 
 function moveHands(current){
+  console.log(current)
+
+  
 
 }
 

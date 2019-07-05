@@ -13,9 +13,7 @@ let getInstrument = (pressedKey) =>{
     },
     
     myKey=pressedKey.key,
-
     data=pressedKey.keyCode,
-
     myInstrument=sounds[myKey];
     
     playIntrument(myInstrument,data);
@@ -27,7 +25,6 @@ let playIntrument = (myInstrument, data) => {
         playMe= new Audio( route ),
         played=document.querySelector(`[data-key='${data}']`);
 
-    
     played.classList.add('playing');
     setTimeout(()=>{played.classList.remove('playing')}, 300);  
     playMe.play(); 
@@ -35,7 +32,5 @@ let playIntrument = (myInstrument, data) => {
 }
 
 let drums = (() => {
-    
     document.addEventListener('keyup', getInstrument);
-
 })()
