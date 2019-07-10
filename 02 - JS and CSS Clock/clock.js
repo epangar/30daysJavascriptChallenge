@@ -10,18 +10,29 @@ function setDate(){
   moveHands(current);
 }
 
-function setHand(number, hand){
-  var myHand=document.getElementsByClassName(hand).style.property()
-}
 
 function moveHands(current){
   console.log(current)
 
+  let hourHand=setHand(current['h'], 'hour-hand'),
+  minHand=setHand(current['m'], 'min-hand'),
+  secondHand=setHand(current['s'], 'second-hand');
   
 
 }
 
-(function clock(){
+
+function setHand(number, hand){
+  console.log(number, hand)
+  var myHand=document.getElementsByClassName(hand)
+  console.log(myHand)
+  //myHand.forEach(item=>item.style.border="1px solid #FAB"+(number*10).toString())
+  //
+}
+
+
+
+(()=>{
 
   setInterval(setDate,1000) 
 })()

@@ -1,24 +1,3 @@
-let getInstrument = (pressedKey) =>{
-    
-    let sounds = {
-        "a":"clap",
-        "s":"hihat",
-        "d":"kick",
-        "f":"openhat",
-        "g":"boom",
-        "h":"ride",
-        "j":"snare",
-        "k":"tom",
-        "l":"tink",
-    },
-    
-    myKey=pressedKey.key,
-    data=pressedKey.keyCode,
-    myInstrument=sounds[myKey];
-    
-     playIntrument(myInstrument,data)
-}
-
 let playIntrument = (myInstrument, data) => {
 
     let route = `./sounds/${myInstrument}.wav`,
@@ -33,5 +12,24 @@ let playIntrument = (myInstrument, data) => {
 
 (() => {
     
-    document.addEventListener('keyup', getInstrument);
+    document.addEventListener('keyup', (pressedKey) =>{
+    
+        let sounds = {
+            "a":"clap",
+            "s":"hihat",
+            "d":"kick",
+            "f":"openhat",
+            "g":"boom",
+            "h":"ride",
+            "j":"snare",
+            "k":"tom",
+            "l":"tink",
+        },
+        
+        myKey=pressedKey.key,
+        data=pressedKey.keyCode,
+        myInstrument=sounds[myKey];
+        
+         playIntrument(myInstrument,data)
+    });
 })()
