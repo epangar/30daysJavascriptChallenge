@@ -16,7 +16,7 @@ let getInstrument = (pressedKey) =>{
     data=pressedKey.keyCode,
     myInstrument=sounds[myKey];
     
-    playIntrument(myInstrument,data);
+     playIntrument(myInstrument,data)
 }
 
 let playIntrument = (myInstrument, data) => {
@@ -31,6 +31,7 @@ let playIntrument = (myInstrument, data) => {
     
 }
 
-let drums = (() => {
+(() => {
+    
     document.addEventListener('keyup', getInstrument);
 })()

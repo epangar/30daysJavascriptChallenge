@@ -10,7 +10,7 @@ function setDate(){
   moveHands(current);
 }
 
-function setHands(number, hand){
+function setHand(number, hand){
   var myHand=document.getElementsByClassName(hand).style.property()
 }
 
