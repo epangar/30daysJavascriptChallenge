@@ -30,9 +30,9 @@ let setHand= (number, hand) => {
     'second-hand': 6,
   },
   
-  degrees = number*objMultiplier[hand];
+  degrees = number * objMultiplier[hand];
   
-  myHand.style.transform=`rotate(${degrees +90}deg)`
+  myHand.style.transform=`rotate(${degrees + 90}deg)`
 }
 
 
