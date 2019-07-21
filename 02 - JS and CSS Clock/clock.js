@@ -1,41 +1,42 @@
-function setDate(){
-  var date = new Date,
+let setDate = () => {
+  const date = new Date,
   
   current={
     'h': date.getHours(),
     'm': date.getMinutes(),
     's': date.getSeconds()
-  }
+  };
 
   moveHands(current);
 }
 
 
-function moveHands(current){
+let moveHands= (current) => {
   
-  let hourHand=setHand(current['h'], 'hour-hand'),
-  minHand=setHand(current['m'], 'min-hand'),
-  secondHand=setHand(current['s'], 'second-hand');
-  
-  
+  setHand(current['h'], 'hour-hand');
+  setHand(current['m'], 'min-hand');
+  setHand(current['s'], 'second-hand');
+    
 }
 
 
-function setHand(number, hand){
-  console.log(number, hand)
+let setHand= (number, hand) => {
+  
   let myHand=document.getElementById(hand),
+  
   objMultiplier={
     'hour-hand': 30,
     'min-hand': 6,
     'second-hand': 6,
   },
+  
   degrees = number*objMultiplier[hand];
   
-  myHand.style.transform="rotate("+ degrees +"deg)"
+  myHand.style.transform=`rotate(${degrees +90}deg)`
 }
 
 
 
-(()=>{
+(() => {
   setInterval(setDate,1000) 
 })()
