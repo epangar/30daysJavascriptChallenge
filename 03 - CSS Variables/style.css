@@ -12,10 +12,28 @@ body {
 
 .controls {
   margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+}
+
+.control-single {
+  width: 33.33% !important;
 }
 
 input {
   width: 100px;
+}
+
+:root {
+  --base: #00D8FF;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
 }
 
 /*# sourceMappingURL=style.css.map */
