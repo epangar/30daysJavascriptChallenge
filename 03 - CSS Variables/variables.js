@@ -4,5 +4,6 @@
   function handleUpdate() {
     console.log(this.dataset.sizing)
   }
+  
   inputs.forEach(input => input.addEventListener('change', handleUpdate))
 })()
