@@ -62,15 +62,15 @@
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
       console.log("\n6)\n");
-      const answer6
-      console.table(answer6)  
+    //   const answer6
+    //   console.table(answer6)  
   
       // 7. sort Exercise
       // Sort the people alphabetically by last name
 
-      console.log("\n6)\n");
-      const answer7=inventors.map
-      console.table(answer6)  
+      console.log("\n7)\n");
+      const answer7=inventors.map(inventor=>inventor).sort((a,b)=>a.last-b.last)
+      console.table(answer7)  
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
