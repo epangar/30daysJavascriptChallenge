@@ -80,6 +80,7 @@
 
       console.log("\n8)\n");
       const answer8= data.reduce(function(obj , item){
+        console.log(obj, item)
         if(!obj[item]){
           obj[item]=0
         }
