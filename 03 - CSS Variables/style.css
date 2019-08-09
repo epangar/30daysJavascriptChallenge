@@ -31,9 +31,14 @@ input {
 }
 
 img {
+  width: 75%;
   padding: var(--spacing);
   background: var(--base);
   filter: blur(var(--blur));
+}
+
+.hl {
+  color: var(--base);
 }
 
 /*# sourceMappingURL=style.css.map */
