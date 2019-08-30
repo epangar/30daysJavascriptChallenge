@@ -1,3 +1,7 @@
+window.onload = () => {
+  setInterval(setDate,1000) 
+}
+
 let setDate = () => {
   const date = new Date,
   
@@ -37,6 +41,5 @@ let setHand= (number, hand) => {
 
 
 
-(() => {
-  setInterval(setDate,1000) 
-})()
+
+
