@@ -14,21 +14,19 @@ window.onload = () => {
         
         const query=myInput.value,        
         expression = new RegExp(query, 'gi'),
-        
         filtered = cities.filter(element =>
             element.city.match(expression) || element.state.match(expression));
-        
-
         
             
         buildList(filtered)
     }
 
     let buildList = (array) =>{
+        
         const list = document.querySelectorAll('.suggestions')[0];
 
-
         if(list.hasChildNodes()){
+            debugger
             emptyList(list)
         }
         
