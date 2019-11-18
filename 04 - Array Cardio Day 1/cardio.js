@@ -23,54 +23,59 @@
       // Array.prototype.filter()
       // 1. Filter the list of inventors for those who were born in the 1500's
   
-      console.log("\n1)\n");
+      console.log("\n1) Filter the list of inventors for those who were born in the 1500's:\n");
       const answer1=inventors.filter(inventor=> (inventor.year<1600 && inventor.year>1499))
       console.table(answer1)
 
       // Array.prototype.map()
       // 2. Give us an array of the inventors' first and last names
 
-      console.log("\n2)\n");
+      console.log("\n2) Give us an array of the inventors' first and last names:\n");
       const answer2=inventors.map(inventor=> `${inventor.first} ${inventor.last}`)
       console.table(answer2)
   
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
 
-      console.log("\n3)\n");
+      console.log("\n3)Sort the inventors by birthdate, oldest to youngest:\n");
       const answer3=inventors.map(inventor=> inventor).sort((a,b)=>a.year-b.year)
       console.table(answer3)
   
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
 
-      console.log("\n4)\n");
+      console.log("\n4) How many years did all the inventors live?:\n");
       const answer4=inventors.map(inventor=>inventor.passed-inventor.year).reduce((a,b)=>a+b)
       console.table(answer4)
   
   
       // 5. Sort the inventors by years lived
 
-      console.log("\n5)\n");
+      console.log("\n5) Sort the inventors by years lived:\n");
       const answer5=inventors.map(inventor=>{
           inventor['yearsLived']=inventor.passed-inventor.year; 
           return inventor;
         }).sort((a,b)=>b.yearsLived-a.yearsLived)
       console.table(answer5)
   
-      // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+      // 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
       console.log("\n6)\n");
-      const answer6=[...document.querySelector(".mw-category").querySelectorAll('a')]
+      if(window.location.href==='https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris'){
+        const answer6=[...document.querySelector(".mw-category").querySelectorAll('a')]
                   .map(link=>link.textContent)
                   .filter(street=>street.includes(" de "))
-      console.table(answer6)  
+        console.table(answer6)  
+      } else {
+        console.log('For this code to work, go to https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris')
+      }
+      
   
       // 7. sort Exercise
       // Sort the people alphabetically by last name
 
-      console.log("\n7)\n");
+      console.log("\n7) Sort the people alphabetically by last name:\n");
       const answer7=inventors.map(inventor=>inventor).sort( (a,b) => a.last.localeCompare(b.last))
       console.table(answer7)  
 
@@ -78,9 +83,9 @@
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-      console.log("\n8)\n");
+      console.log("\n8) Sum up the instances of each of these:\n");
       const answer8= data.reduce(function(obj , item){
-        console.log(obj, item)
+        // console.log(obj, item)
         if(!obj[item]){
           obj[item]=0
         }

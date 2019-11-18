@@ -26,7 +26,6 @@ window.onload = () => {
         const list = document.querySelectorAll('.suggestions')[0];
 
         if(list.hasChildNodes()){
-            debugger
             emptyList(list)
         }
         

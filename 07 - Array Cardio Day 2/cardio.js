@@ -18,12 +18,12 @@ const people = [
   const today = new Date().getFullYear();
   // Some and Every Checks
   // Array.prototype.some() // is at least one person 19 or older?
-  console.log("\n1)\n");
+  console.log("\n1) Array.prototype.some(): is at least one person 19 or older?:\n");
   const answer1 = people.some(p=>today-p.year>=19)
   console.log(answer1)
 
   // Array.prototype.every() // is everyone 19 or older?
-  console.log("\n2)\n");
+  console.log("\n2) Array.prototype.every(): is everyone 19 or older?:\n");
   const answer2 = people.every(p=>today-p.year>=19)
   console.log(answer2)
 
@@ -31,7 +31,7 @@ const people = [
   // Array.prototype.find()
   // Find is like filter, but instead returns just the one you are looking for
   // find the comment with the ID of 823423
-  console.log("\n3)\n");
+  console.log("\n3) Array.prototype.find():\nFind is like filter, but instead returns just the one you are looking for. \nFind the comment with the ID of 823423\n");
   const answer3 = comments.find(c=>c.id===823423).text
   console.log(answer3)
 
@@ -39,10 +39,13 @@ const people = [
   // Find the comment with this ID
   // delete the comment with the ID of 823423
 
-  console.log("\n4)\n");
-  const answer4 = comments.findIndex(c=>c.id===823423)
+  console.log("\n4) Array.prototype.findIndex(): Find the comment with this ID:\n");
+  const index=comments.findIndex(c=>c.id===823423)
+  const answer4 = comments[index].text
   console.log(answer4);
-  console.log("\n5)\n");
+
+
+  console.log("\n5) Delete the comment with the ID of 823423: \n");
   comments.splice(answer4,1)
   console.table(comments);
   
