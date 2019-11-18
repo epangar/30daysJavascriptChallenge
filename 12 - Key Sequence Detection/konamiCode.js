@@ -1,7 +1,19 @@
-let lol =()=> {
-    console.log("Key up")
+const pressed=[];
+
+const secretCode="mycodecode"
+
+let whenPressedKey = (pressedKey) => {
+    
+    let value=pressedKey.key
+    pressed.push(value)
+    
+    let total=pressed.slice(-secretCode.length).join('')
+
+    if(total.includes(secretCode)){
+        cornify_add();
+    }
 }
 
-window.addEventListener('keyup', lol)
+window.addEventListener('keyup', whenPressedKey)
 
 
