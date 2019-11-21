@@ -1,22 +1,21 @@
-window.onload = () => {
-
+window.onload=()=>{
     const iframe = document.querySelectorAll('.inline-frame');
-    const buttons = document.querySelectorAll('.button')
-    //console.log(iframe)
-    //console.log(buttons)
+    const inputs = document.querySelectorAll('input'); 
+    
+    function changeSRC() {
+        console.clear();
 
-    
-    buttons.forEach(button => {
-        //console.log(button.value)
-        button.addEventListener('click', changeSRC(button))
+        const value = this.value;
+        iframe[0].attributes[4].value = `./${value}/index-START.html`
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('change', changeSRC)
     });
-    
-}
-let changeSRC = (element) =>{
-    debugger
-    let value = element.value;
-    //console.log(iframe)
-    //iframe.href="http://www.google.com";
-}
+}    
+
+
+
+
 
 

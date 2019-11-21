@@ -4,7 +4,6 @@ window.onload=()=>{
   
   function handleUpdate(){
     const suffix = this.dataset.sizing || '';
-    // debugger;
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
   }
   

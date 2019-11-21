@@ -1,6 +1,6 @@
   // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
-
+    console.clear;
     // Some data we can work with
 
     const inventors = [
