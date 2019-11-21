@@ -1,6 +1,6 @@
 const pressed=[];
 
-const secretCode="mycodecode"
+const secretCode="konami"
 
 let whenPressedKey = (pressedKey) => {
     
