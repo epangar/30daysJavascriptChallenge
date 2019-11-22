@@ -8,8 +8,6 @@ window.onload=()=>{
         const value = this.value;
         
         iframe[0].attributes[4].value = `./${value}/index-START.html`
-        console.log(value)
-        console.log(iframe[0].attributes[4].value)
     }
 
     inputs.forEach(input => {
