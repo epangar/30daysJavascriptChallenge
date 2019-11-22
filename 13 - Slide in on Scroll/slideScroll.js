@@ -29,11 +29,27 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
-let checkSlide = (e)=>{
-  console.count(e);
-  slides.forEach(slide=> console.log(slide))
+let checkImage = (event)=>{
+  
+
+  images.forEach(image=> {
+    const slideInAt = (window.scrollY + window.innerHeight) - image.height / 2;
+    
+    const imageBottom = image.offsetTop + image.height;
+    const isHalfShown = slideInAt > image.offsetTop;
+    const isNotScrolledPast = window.scrollY < imageBottom;
+    if (isHalfShown && isNotScrolledPast) {
+      image.classList.add('active');
+    } else {
+      image.classList.remove('active');
+    }
+
+  });
 }
 
-const slides = document.querySelectorAll('.slide-in');
 
-window.addEventListener('scroll', debounce(checkSlide))
+
+const images = document.querySelectorAll('.slide-in');
+
+window.addEventListener('scroll', debounce(checkImage))
+
