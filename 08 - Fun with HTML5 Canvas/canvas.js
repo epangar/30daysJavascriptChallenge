@@ -4,7 +4,6 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-ctx.strokeStyle="5, 5, 67";
 // ctx.lineJoin = 'round';
 // ctx.lineCap = 'round';
 
