@@ -4,10 +4,10 @@ window.onload=()=>{
     
     function changeSRC() {
         console.clear();
-
+        
         const value = this.value;
         
-        iframe[0].attributes[4].value = `./${value}/index-START.html`
+        iframe[0].attributes[2].value = `./${value}/index-START.html`
     }
 
     inputs.forEach(input => {

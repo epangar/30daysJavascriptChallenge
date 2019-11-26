@@ -1,8 +1,30 @@
+.content{
+    display: flex;
+}
+
+.inline-frame {
+    width: 85vw;
+    height: 88vh;
+}
+
 .inputs{
     display: flex;
     flex-flow: column;
+
+    &__label{
+        border: 1px solid red;
+        width: 22vw;
+    }
 }
 
-.content{
-    display: flex;
+@media (min-width: 600px) {
+    *{
+        border: 1px solid aquamarine;
+    }
+}
+
+@media (min-width: 1024px) {
+    *{
+        border: 1px solid greenyellow;
+    }
 }
