@@ -36,18 +36,8 @@
 
     }
 
-
-
-
-    
-
   }
 
-  
-
-
-  
-  
 
 
   window.addEventListener('keydown', detectPressed);
