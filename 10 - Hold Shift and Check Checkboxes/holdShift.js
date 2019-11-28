@@ -1,25 +1,56 @@
-let detectPressed = (pressedKey) =>{
+//window.onload = (()=>{
+  let isShift = (event) => event.shiftKey;
+
+  let checkbox = document.querySelectorAll('.inbox input')
   
-  let value = pressedKey.key;
+  let detectPressed = (event) =>{
+
+    if(isShift(event)){
+       detectPortion();
+    }
   
-  if(value==='Shift'){
-    detectHold(value);
   }
+
+  let detectPortion = () =>{
+    
+    let startAndEnd=[];
+
+    checkbox.forEach((o,p)=>{
+      if(o.checked){
+        startAndEnd.push(p);
+      }
+    })
+
+
+    if(startAndEnd.length>1){
+      
+      let start=startAndEnd[0];
+
+      let end=startAndEnd[startAndEnd.length-1]
+
+      checkbox.forEach((o,p)=>{
+        if(p>start && p<=end){
+          o.checked=true;
+        }
+      })
+
+    }
+
+
+
+
+    
+
+  }
+
   
-}
 
-let detectHold =(pressedKey)=>{
-  debugger
-  console.log(`${pressedKey} is hold.`);
-}
 
-let isChecked = (element) => element.checked;
+  
+  
 
-window.onload = (()=>{
-  var checkbox = document.querySelectorAll('.inbox input')
-  console.log(checkbox)
 
-})
+  window.addEventListener('keydown', detectPressed);
 
-window.addEventListener('keydown', detectPressed);
-window.addEventListener('keydown', (event)=> event.repeat ? detectHold : "");
+
+//})
