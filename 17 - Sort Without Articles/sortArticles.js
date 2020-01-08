@@ -14,16 +14,20 @@ const bands = [
     'An Old Dog'
 ];
 
+const trimBand = band => band.replace(/^(a |the |an )/i, '').trim()
 
 const sortedBands = bands.map(o=>o).sort((a,b)=>{
-    return (a<b) ? -1 : 1;
+    return (trimBand(a) < trimBand(b) ) ? -1 : 1;
 })
+
 console.log(sortedBands);
+
 const bandsList = document.getElementById('bands');
+
 console.log(bandsList);
 
+
 sortedBands.forEach(band => {
-    
     let myLI = document.createElement('LI');
     let myBand = document.createTextNode(band);
     myLI.appendChild(myBand);
