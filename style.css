@@ -12,7 +12,6 @@
   flex-flow: column;
 }
 .inputs__label {
-  border: 1px solid red;
   width: 22vw;
 }
 
