@@ -1,18 +1,20 @@
 .content{
     display: flex;
+    width: 100%;
 }
 
 .inline-frame {
-    width: 85vw;
-    height: 88vh;
+    width: 80%;
+    height: 100%;
 }
 
 .inputs{
     display: flex;
     flex-flow: column;
+    width: 20%;
 
     &__label{
-        width: 22vw;
+        width: 100%;
     }
 }
 
