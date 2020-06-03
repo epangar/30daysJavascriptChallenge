@@ -6,7 +6,6 @@ window.onload=()=>{
         console.clear();
         
         const value = this.value;
-        
         iframe[0].attributes[2].value = `./${value}/index-START.html`
     }
 
