@@ -2,7 +2,7 @@ window.onload=()=>{
     const iframe = document.querySelectorAll('.inline-frame');
     const inputs = document.querySelectorAll('input'); 
     
-    function changeSRC() {
+    function changeSRC()  {
         console.clear();
         
         const value = this.value;
@@ -10,6 +10,7 @@ window.onload=()=>{
     }
 
     inputs.forEach(input => {
+        
         input.addEventListener('change', changeSRC)
     });
 }    

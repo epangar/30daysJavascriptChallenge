@@ -24,9 +24,6 @@ console.log(sortedBands);
 
 const bandsList = document.getElementById('bands');
 
-console.log(bandsList);
-
-
 sortedBands.forEach(band => {
     let myLI = document.createElement('LI');
     let myBand = document.createTextNode(band);
